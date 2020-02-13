@@ -26,7 +26,7 @@ class SongsController < ApplicationController
     artist = Artist.find_by(name: params["Artist Name"])
     if artist && params["Artist Name"] != ""
       song.artist = artist
-      binding.pry
+      # binding.pry
     elsif params["Artist Name"] != ""
       artist = Artist.create(name: params["Artist Name"])
       song.artist = artist
