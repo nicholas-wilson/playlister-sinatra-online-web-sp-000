@@ -5,12 +5,4 @@ class Song < ActiveRecord::Base
   include Slugifiable::InstanceMethods
   extend Slugifiable::ClassMethods
 
-  # attr_accessor :genre_ids
-  #
-  # def genre_ids=(genre_id)
-  #   if !@genre_ids
-  #     @genre_ids = []
-  #   end
-  #   @genre_ids << genre_id
-  # end
 end
