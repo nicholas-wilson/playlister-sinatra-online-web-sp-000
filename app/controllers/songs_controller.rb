@@ -33,7 +33,7 @@ class SongsController < ApplicationController
     end
     song.genre_ids = params[:genres]
     # binding.pry
-    redirect :"/songs"
+    redirect :"/songs/:slug"
   end
 
   patch '/songs/:slug' do
