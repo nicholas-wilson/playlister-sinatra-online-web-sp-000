@@ -29,7 +29,9 @@ class SongsController < ApplicationController
       binding.pry
     elsif params["Artist Name"] != ""
       artist = Artist.create(name: params["Artist Name"])
+      song.artist = artist
     end
+
   end
 
   patch '/songs/:slug' do
