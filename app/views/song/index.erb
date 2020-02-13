@@ -4,6 +4,9 @@
     <title>Song Index</title>
   </head>
   <body>
-    <h1>Song Butts</h1>
+    <h1>Songs</h1>
+    <%@songs.each.with_index do |song, i|%>
+      <p><%= "#{i}" + song.name%></p>
+    <%end%>
   </body>
 </html>
