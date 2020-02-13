@@ -46,7 +46,7 @@ class SongsController < ApplicationController
       artist.songs << song
     end
     song.genres = params[:genres]
-    binding.pry
+    # binding.pry
   end
 
   delete '/songs/:slug' do
