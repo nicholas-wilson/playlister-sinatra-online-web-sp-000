@@ -6,8 +6,8 @@
   </head>
   <body>
     <h1>Artists</h1>
-    <%@songs.each.with_index do |song, i|%>
-      <p><%= "#{i}. "%><a href="/songs/<%=song.slug%>"><%=song.name%></a></p>
+    <%@artists.each.with_index do |artist, i|%>
+      <p><%= "#{i}. "%><a href="/artists/<%=artist.slug%>"><%=artist.name%></a></p>
     <%end%>
   </body>
 </html>
