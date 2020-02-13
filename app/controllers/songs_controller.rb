@@ -24,11 +24,11 @@ class SongsController < ApplicationController
     song = Song.new()
     song.name = params["Name"]
     song.save
-    artist = Artist.find_by(name: params["Artist Name"])
+    artist = Artist.find_by(name: params["artist_name"])
     if artist && params["Artist Name"] != ""
       song.artist = artist
     elsif params["Artist Name"] != ""
-      artist = Artist.create(name: params["Artist Name"])
+      artist = Artist.create(name: params["artist_name"])
       song.artist = artist
     end
     song.genre_ids = params[:genres]
