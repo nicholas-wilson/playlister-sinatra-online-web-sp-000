@@ -21,7 +21,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
-
+    song = Song.new(params[:song])
   end
 
   patch '/songs/:slug' do
