@@ -24,9 +24,11 @@ class SongsController < ApplicationController
     song = Song.new()
     song.name = params["Name"]
     artist = Artist.find_by(name: params["Artist Name"])
-    if artist
+    if artist && params["Artist Name"] != ""
       song.artist = artist
       binding.pry
+    elsif params["Artist Name"] != ""
+      artist = Artist.create(name: params["Artist Name"])
     end
   end
 
