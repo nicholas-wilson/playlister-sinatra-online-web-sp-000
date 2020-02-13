@@ -23,6 +23,7 @@ class SongsController < ApplicationController
   post '/songs' do
     song = Song.new()
     song.name = params["Name"]
+    song.save
     artist = Artist.find_by(name: params["Artist Name"])
     if artist && params["Artist Name"] != ""
       song.artist = artist
