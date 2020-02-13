@@ -10,12 +10,12 @@ module Slugifiable
     def self.find_by_slug(slug)
       obj_name = slug.gsub(/-/, " ")
       obj = nil
-      self.all.each do |artist|
-        if artist.name.downcase == artist_name
-          artist_obj = artist
+      self.all.each do |instance|
+        if instance.name.downcase == obj_name
+          obj = instance
         end
       end
-      artist_obj
+      obj
     end
   end
 end
