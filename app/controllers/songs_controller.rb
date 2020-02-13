@@ -31,8 +31,8 @@ class SongsController < ApplicationController
       artist = Artist.create(name: params["Artist Name"])
       song.artist = artist
     end
-    # song.genre_ids = params[:genres]
-    binding.pry
+    song.genre_ids = params[:genres]
+    # binding.pry
   end
 
   patch '/songs/:slug' do
