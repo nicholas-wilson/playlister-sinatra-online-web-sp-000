@@ -33,8 +33,7 @@ class SongsController < ApplicationController
       artist.songs << song
     end
     song.genre_ids = params[:genres]
-    erb :"/song/success"
-    # redirect :"/songs/#{song.slug}"
+    redirect :"/songs/#{song.slug}"
   end
 
   patch '/songs/:slug' do
