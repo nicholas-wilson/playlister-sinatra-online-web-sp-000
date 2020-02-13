@@ -9,11 +9,11 @@ class ArtistsController < ApplicationController
 
   end
 
-  get '/artists/:id' do
+  get '/artists/:slug' do
 
   end
 
-  get '/artists/:id/edit' do
+  get '/artists/:slug/edit' do
 
   end
 
@@ -21,11 +21,11 @@ class ArtistsController < ApplicationController
 
   end
 
-  patch '/artists/:id' do
+  patch '/artists/:slug' do
 
   end
 
-  delete '/artists/:id' do
+  delete '/artists/:slug' do
 
   end
 end
