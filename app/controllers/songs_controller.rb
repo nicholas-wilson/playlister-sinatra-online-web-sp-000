@@ -25,7 +25,7 @@ class SongsController < ApplicationController
     song.name = params["Name"]
     artist = Artist.find_by(name: params["Artist Name"])
     if artist
-      song.artist =
+      song.artist = artist
       binding.pry
     end
   end
