@@ -4,6 +4,12 @@
   <input type="text" id="song_name" name="Name">
   <br><br>
 
+  <h4>Genre: </h4>
+  <%@genres.each do |genre|%>
+    <input type="checkbox" name="<%= genre.name %>" id="<%= genre.id %>" value="<%= genre.id %>"><%= genre.name %><br><br>
+  <%end%>
+  <br><br>
+
   <h4>Artist: </h4>
   <%@artists.each do |artist|%>
     <input type="checkbox" name="<%= artist.name %>" id="<%= artist.id %>" value="<%= artist.id %>"><%= artist.name %><br><br>
