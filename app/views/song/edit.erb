@@ -2,7 +2,7 @@
 <form action="/songs/<%= @song.name %>" method="post">
   <input type="hidden" id="hidden" name="_method" value="PATCH">
   <label for="song_name">Song name: </label>
-  <input type="text" id="song_name" name="Name">
+  <input type="text" id="song_name" name="Name" value="<%= @song.name %>">
   <br><br>
 
   <h4>Genre: </h4>
@@ -12,7 +12,7 @@
   <br><br>
 
   <label for="Artist Name">Artist: </label>
-  <input type="text" name="artist_name" id="Artist Name">
+  <input type="text" name="artist_name" id="Artist Name" value="<%= @song.artist.name %>">
   <br><br>
 
   <input type="submit" value="Create">
