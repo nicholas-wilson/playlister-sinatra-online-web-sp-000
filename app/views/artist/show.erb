@@ -5,6 +5,7 @@
   </head>
   <body>
     <h2><%= @artist.name %></h2>
+
     <p>Songs: </p>
     <ul>
       <%@artist.songs.each do |song|%>
@@ -12,6 +13,13 @@
       <%end%>
     </ul>
     <br>
+
     <p>Genres: </p>
+    <ul>
+      <%@artist.genres.each do |genre|%>
+        <li><a href="/genres/<%= genre.slug %>"><%= genre.name %></a></li>
+      <%end%>
+    </ul>
+
   </body>
 </html>
