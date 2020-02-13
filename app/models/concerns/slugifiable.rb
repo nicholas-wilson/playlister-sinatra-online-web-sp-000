@@ -11,7 +11,6 @@ module Slugifiable
       obj_name = slug.gsub(/-/, " ")
       obj = nil
       self.all.each do |instance|
-        binding.pry
         if instance.name.downcase == obj_name
           obj = instance
         end
