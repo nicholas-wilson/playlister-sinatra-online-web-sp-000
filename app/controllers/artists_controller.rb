@@ -19,7 +19,7 @@ class ArtistsController < ApplicationController
   end
 
   post '/artists' do
-
+    binding.pry
   end
 
   patch '/artists/:slug' do
