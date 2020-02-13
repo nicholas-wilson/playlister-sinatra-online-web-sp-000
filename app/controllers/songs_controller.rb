@@ -45,7 +45,7 @@ class SongsController < ApplicationController
       artist = Artist.create(name: params["artist_name"])
       artist.songs << song
     end
-    song.genres = params[:genres]
+    song.genre_ids = params[:genres]
     binding.pry
   end
 
