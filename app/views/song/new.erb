@@ -6,7 +6,7 @@
 
   <h4>Artist: </h4>
   <%@artists.each do |artist|%>
-    <input type="checkbox" name="Artist" id="<%= artist.id %>" value="<%= artist.name %>"><br><br>
+    <input type="checkbox" name="Artist" id="<%= artist.id %>" value="<%= artist.id %>"<%= artist.name %>><br><br>
   <%end%>
   <input type="submit" value="Create">
 
