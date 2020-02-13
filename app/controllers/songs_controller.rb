@@ -25,7 +25,7 @@ class SongsController < ApplicationController
     song.name = params["Name"]
     song.save
     artist = Artist.find_by(name: params["artist_name"])
-    if artist && params["Artist Name"] != ""
+    if artist && params["artist_name"] != ""
       song.artist = artist
     elsif params["Artist Name"] != ""
       artist = Artist.create(name: params["artist_name"])
