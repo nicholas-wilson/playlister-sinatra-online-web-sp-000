@@ -21,6 +21,7 @@ class SongsController < ApplicationController
   end
 
   post '/songs' do
+    binding.pry
     song = Song.new(params[:song])
   end
 
