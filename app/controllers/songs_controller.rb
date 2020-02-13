@@ -1,7 +1,7 @@
 class SongsController < ApplicationController
 
   get '/songs' do
-
+    erb :"/song/index"
   end
 
   get '/songs/new' do
