@@ -45,7 +45,7 @@ class SongsController < ApplicationController
       artist = Artist.create(name: params["artist_name"])
       artist.songs << song
     end
-    # song.update(name: params["Name"])
+    song.update(name: params["Name"])
     redirect :"/songs/#{song.slug}"
   end
 
