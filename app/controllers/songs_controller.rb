@@ -9,11 +9,11 @@ class SongsController < ApplicationController
 
   end
 
-  get '/songs/:id' do
+  get '/songs/:slug' do
 
   end
 
-  get '/songs/:id/edit' do
+  get '/songs/:slug/edit' do
 
   end
 
@@ -21,11 +21,11 @@ class SongsController < ApplicationController
 
   end
 
-  patch '/songs/:id' do
+  patch '/songs/:slug' do
 
   end
 
-  delete '/songs/:id' do
+  delete '/songs/:slug' do
 
   end
 end
