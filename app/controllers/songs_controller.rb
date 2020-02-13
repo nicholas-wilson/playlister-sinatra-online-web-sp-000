@@ -22,7 +22,11 @@ class SongsController < ApplicationController
 
   post '/songs' do
     binding.pry
-    song = Song.new(params[:song])
+    song = Song.new()
+    song.name = params["Name"]
+    if !params["Artist Name"]
+      song.artist = Artist.find_by(name: params["Artist Name"])
+    end
   end
 
   patch '/songs/:slug' do
