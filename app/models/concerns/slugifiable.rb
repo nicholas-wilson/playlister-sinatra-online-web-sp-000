@@ -7,7 +7,7 @@ module Slugifiable
   end
 
   module ClassMethods
-    def self.find_by_slug(slug)
+    def find_by_slug(slug)
       obj_name = slug.gsub(/-/, " ")
       obj = nil
       self.all.each do |instance|
