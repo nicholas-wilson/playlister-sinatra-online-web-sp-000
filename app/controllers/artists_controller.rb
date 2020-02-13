@@ -20,7 +20,9 @@ class ArtistsController < ApplicationController
 
   end
 
-  patch '/artists/:id'
+  patch '/artists/:id' do
+
+  end
 
   delete '/artists/:id' do
 
